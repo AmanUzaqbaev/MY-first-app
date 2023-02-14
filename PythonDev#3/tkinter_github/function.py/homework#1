@@ -1,0 +1,69 @@
+alphabets = 'abcdefghijklmnopqrstuvwxyz'
+num_alphabets = len(alphabets)
+
+def encrypt(code_2text , key):
+    code_1text = ''
+    for letter in code_2text:
+        letter = letter.lower()
+        if not letter == ' ':
+            index = alphabets.find(letter)
+            if index == -1:
+                code_1text += letter
+            else:
+                new_index = index + key
+                if new_index >= num_alphabets:
+                    new_index -= num_alphabets
+                code_1text += alphabets[new_index]
+    return code_1text
+
+def decrypt(code_1text , key):
+    code_2text = ''
+    for letter in code_1text:
+        letter = letter.lower()
+        if not letter == ' ':
+            index = alphabets.find(letter)
+            if index == -1:
+                code_2text += letter
+            else:
+                new_index = index - key
+                if new_index < 0:
+                    new_index += num_alphabets
+                code_2text += alphabets[new_index]
+    return code_2text
+
+
+
+print()
+
+print()
+print('***Shift code program***')
+print()
+
+print('Saylan')
+print('1)Make a code\n2)Decode a message\n3)Quit')
+user_input = input('1/2/3: ').lower()
+
+print()
+
+if user_input == '1':
+    print('encrption mode selected')
+    print()
+    key = int(input('(Enter a number (1-26)): '))
+    text = input('Enter your message: ')
+    code_1text = encrypt(text, key)
+    print(f'kod: {code_1text} ')
+
+
+elif user_input == '2':
+    print('decrption mode selected')
+    print()
+    key = int(input('(Enter a number (1-26)): '))
+    text = input('Enter your message: ')
+    code_2text = decrypt(text, key)
+    print(f'kod: {code_2text} ')
+
+elif user_input == '3':
+    exit()
+   
+
+

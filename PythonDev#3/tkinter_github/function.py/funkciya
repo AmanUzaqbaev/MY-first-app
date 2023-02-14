@@ -1,0 +1,26 @@
+'''numbers = list(range(1,5+1,1))
+print(f'New numbers: {numbers}')
+
+def  sqrt(args):
+    return args
+
+b = list(map(lambda a: pow(a,3), numbers))
+print(f'After: {b}')'''
+
+#print(list(map(lambda a: pow(a,3), [1,2,3,4,5])))
+
+#print(list(map(lambda a,b: pow(a,b), [5,4,3,2,1], [1,2,3,4,5])))
+'''print(list(map(lambda a,b: pow(a,b), [1,2,3,4,5], [10,8,6,3,2], )))
+print(list(filter(lambda a,b: a:b%2==0, list(range[1,2,3,4,5], [10,8,6,4,2] ) )))'''
+
+
+'''print(list(filter(lambda x:x%2==0, range(1,9))))'''
+
+numbers = list(map(lambda a,b: pow(a,b), [1,2,3,4,5], [10,8,6,4,2], ))
+print(f'New numbers: {numbers}')
+
+def  sqrt(args):
+    return args
+
+b = list(filter(lambda x:x%2==0, range(a,b)))
+print(f'After: {b}')
